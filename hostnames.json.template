@@ -1,0 +1,7 @@
+[
+  "{zone_name}.b-cdn.net",
+  "{domain}",
+  "www.{domain}",
+  "cdn1.{domain}",
+  "fastly.{domain}"
+]

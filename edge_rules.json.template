@@ -1,0 +1,244 @@
+[
+  {{
+    "ActionType": 5,
+    "ActionParameter1": "X-Frame-Options",
+    "ActionParameter2": "DENY",
+    "Triggers": [
+      {{
+        "Type": 0,
+        "PatternMatches": [
+          "*"
+        ],
+        "PatternMatchingType": 0,
+        "Parameter1": ""
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "X-Frame-Options: DENY",
+    "Enabled": true
+  }},
+  {{
+    "ActionType": 5,
+    "ActionParameter1": "Feature-Policy",
+    "ActionParameter2": "fullscreen 'self' ; unsized-media 'self'; payment 'self' ; autoplay 'self'",
+    "Triggers": [
+      {{
+        "Type": 0,
+        "PatternMatches": [
+          "*"
+        ],
+        "PatternMatchingType": 0,
+        "Parameter1": ""
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "Feature-Policy",
+    "Enabled": true
+  }},
+  {{
+    "ActionType": 5,
+    "ActionParameter1": "Referrer-Policy",
+    "ActionParameter2": "unsafe-url",
+    "Triggers": [
+      {{
+        "Type": 0,
+        "PatternMatches": [
+          "*"
+        ],
+        "PatternMatchingType": 0,
+        "Parameter1": ""
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "Referrer-Policy",
+    "Enabled": true
+  }},
+  {{
+    "ActionType": 5,
+    "ActionParameter1": "Content-Type",
+    "ActionParameter2": "application/javascript",
+    "Triggers": [
+      {{
+        "Type": 3,
+        "PatternMatches": [
+          "mjs"
+        ],
+        "PatternMatchingType": 0,
+        "Parameter1": ""
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "Content-Type: application/javascript",
+    "Enabled": true
+  }},
+  {{
+    "ActionType": 5,
+    "ActionParameter1": "strict-transport-security",
+    "ActionParameter2": "max-age=15552000; includeSubDomains; preload",
+    "Triggers": [
+      {{
+        "Type": 0,
+        "PatternMatches": [
+          "https://{zone_name}.b-cdn.net/"
+        ],
+        "PatternMatchingType": 1,
+        "Parameter1": ""
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "strict-transport-security",
+    "Enabled": true
+  }},
+  {{
+    "ActionType": 5,
+    "ActionParameter1": "cache-control",
+    "ActionParameter2": "public,max-age=31536000,immutable",
+    "Triggers": [
+      {{
+        "Type": 3,
+        "PatternMatches": [
+          "cssb",
+          "mjs"
+        ],
+        "PatternMatchingType": 0,
+        "Parameter1": ""
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "cache-control",
+    "Enabled": true
+  }},
+  {{
+    "ActionType": 5,
+    "ActionParameter1": "X-WebKit-CSP",
+    "ActionParameter2": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' {zone_name}.b-cdn.net *.{domain}; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://{zone_name}.b-cdn.net *.{domain} https://fonts.googleapis.com; img-src * 'self' data:; font-src *; connect-src 'self' wss://auth.{domain} wss://*.{domain}:8443",
+    "Triggers": [
+      {{
+        "Type": 1,
+        "PatternMatches": [
+          "iphone",
+          "ipad"
+        ],
+        "PatternMatchingType": 0,
+        "Parameter1": "User-Agent"
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "X-WebKit-CSP",
+    "Enabled": true
+  }},
+  {{
+    "ActionType": 1,
+    "ActionParameter1": "https://{domain}/{{{{path}}}}",
+    "ActionParameter2": "",
+    "Triggers": [
+      {{
+        "Type": 0,
+        "PatternMatches": [
+          "www.{domain}/*"
+        ],
+        "PatternMatchingType": 0,
+        "Parameter1": ""
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "WWW.{domain} Fix",
+    "Enabled": false
+  }},
+  {{
+    "ActionType": 5,
+    "ActionParameter1": "Content-Encoding",
+    "ActionParameter2": "br",
+    "Triggers": [
+      {{
+        "Type": 3,
+        "PatternMatches": [
+          "mjs",
+          "mcss",
+          "cssb",
+          "scss"
+        ],
+        "PatternMatchingType": 0,
+        "Parameter1": ""
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "",
+    "Enabled": true
+  }},
+  {{
+    "ActionType": 5,
+    "ActionParameter1": "Content-Type",
+    "ActionParameter2": "text/css",
+    "Triggers": [
+      {{
+        "Type": 3,
+        "PatternMatches": [
+          "mcss",
+          "cssb",
+          "scss"
+        ],
+        "PatternMatchingType": 0,
+        "Parameter1": ""
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "",
+    "Enabled": true
+  }},
+  {{
+    "ActionType": 5,
+    "ActionParameter1": "Content-Security-Poop",
+    "ActionParameter2": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' {zone_name}.b-cdn.net *.{domain}; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://{zone_name}.b-cdn.net *.{domain} https://fonts.googleapis.com; img-src * 'self' data:; font-src *; connect-src 'self' wss://auth.{domain} wss://*.{domain}:8443",
+    "Triggers": [
+      {{
+        "Type": 1,
+        "PatternMatches": [
+          "iphone",
+          "ipad"
+        ],
+        "PatternMatchingType": 2,
+        "Parameter1": "User-Agent"
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "Content-Security-Policy",
+    "Enabled": true
+  }},
+  {{
+    "ActionType": 5,
+    "ActionParameter1": "Access-Control-Allow-Origin",
+    "ActionParameter2": "*",
+    "Triggers": [
+      {{
+        "Type": 0,
+        "PatternMatches": [
+          "*"
+        ],
+        "PatternMatchingType": 0,
+        "Parameter1": ""
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "Disable CORS",
+    "Enabled": true
+  }},
+  {{
+    "ActionType": 5,
+    "ActionParameter1": "Vary",
+    "ActionParameter2": "Origin",
+    "Triggers": [
+      {{
+        "Type": 0,
+        "PatternMatches": [
+          "*"
+        ],
+        "PatternMatchingType": 0,
+        "Parameter1": ""
+      }}
+    ],
+    "TriggerMatchingType": 0,
+    "Description": "Vary in addition to other CORS crap",
+    "Enabled": true
+  }}
+]
