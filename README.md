@@ -27,3 +27,7 @@ optional arguments:
   --zone-id [ZONE_ID]
   --zone-name [ZONE_NAME]
 ```
+
+Note:
+if you want to modify the edge rule template you can find the magic api details here
+https://docs.bunny.net/reference/pullzonepublic_addedgerule
