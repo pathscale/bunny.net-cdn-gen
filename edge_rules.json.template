@@ -240,5 +240,35 @@
     "TriggerMatchingType": 0,
     "Description": "Vary in addition to other CORS crap",
     "Enabled": true
-  }}
+  }},
+{{
+  "ActionType": 14,
+  "TriggerMatchingType": 1,
+  "Enabled": true,
+  "ActionParameter1": "200",
+  "Triggers": [
+    {{
+      "Type": 0,
+      "PatternMatchingType": 2,
+      "PatternMatches": [
+        "/"
+      ]
+    }},
+    {{
+      "Type": 0,
+      "PatternMatchingType": 0,
+      "PatternMatches": [
+        "*"
+      ]
+    }},
+    {{
+      "Type": 8,
+      "PatternMatchingType": 2,
+      "PatternMatches": [
+        "304"
+      ]
+    }}
+  ],
+  "Description": "no more 404"
+}}
 ]
